@@ -14,7 +14,7 @@ build() {
 }
 
 run() {
-    compose_base run atog go run /go/bin/main "$@"
+    compose_base run atog go run "$@"
 }
 
 bash() {
