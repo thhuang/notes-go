@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -e
+
+command=$1
+shift
+
+compose_base() {
+    set -x
+    docker-compose "$@"
+}
+
+build() {
+    compose_base build "$@"
+}
+
+run() {
+    compose_base run atog go run /go/bin/main "$@"
+}
+
+bash() {
+    compose_base run atog bash
+}
+
+go() {
+    compose_base run atog go "$@"
+}
+
+case $command in
+build)
+    build "$@"
+    ;;
+fresh_build)
+    build --no-cache
+    ;;
+run)
+    run "$@"
+    ;;
+bash)
+    bash
+    ;;
+go)
+    go "$@"
+    ;;
+*)
+    echo "Error: command not found: $command"
+    exit 1
+    ;;
+esac
