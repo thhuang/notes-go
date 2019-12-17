@@ -7,7 +7,7 @@ func Pic(dx, dy int) [][]uint8 {
 	for i := range img {
 		row := make([]uint8, dy)
 		for j := range row {
-			row[j] = uint8(i^j)
+			row[j] = uint8(i ^ j)
 		}
 		img[i] = row
 	}
@@ -17,4 +17,3 @@ func Pic(dx, dy int) [][]uint8 {
 func main() {
 	pic.Show(Pic)
 }
-
