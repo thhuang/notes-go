@@ -2,16 +2,18 @@ package main
 
 import "fmt"
 
-type person struct {
-	name string
-	age  int
-}
+type IPAddr [4]byte
 
-func (p person) String() string {
-	return fmt.Sprintf("%v (%v years)", p.name, p.age)
+func (ip IPAddr) String() string {
+	return fmt.Sprintf("%d.%d.%d.%d", ip[0], ip[1], ip[2], ip[3])
 }
 
 func main() {
-	fmt.Println(person{"Arthur Dent", 42})
-	fmt.Println(person{"Zaphod Beeblebrox", 9001})
+	hosts := map[string]IPAddr{
+		"loopback":  {127, 0, 0, 1},
+		"googleDNS": {8, 8, 8, 8},
+	}
+	for name, ip := range hosts {
+		fmt.Printf("%v: %v\n", name, ip)
+	}
 }
