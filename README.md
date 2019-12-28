@@ -1,8 +1,12 @@
-# [A Tour of Go](https://golang.org/doc/)
+# Notes: Go
 
-## atog
-- build: `./atog build [arg]`
-- fresh_build: `./atog fresh_build`
-- bash: `./atog bash`
-- run: `./atog run [arg]`
-- go: `./atog go [arg]`
+## Tutorials
+
+### [A Tour of Go](https://golang.org/doc/)
+
+## `ng`
+- build: `./ng build [arg]`
+- fresh_build: `./ng fresh_build`
+- bash: `./ng bash`
+- run: `./ng run [arg]`
+- go: `./ng go [arg]`
