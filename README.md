@@ -2,7 +2,7 @@
 
 ## Tutorials
 
-### [A Tour of Go](https://golang.org/doc/)
+- [A Tour of Go](https://golang.org/doc/)
 
 ## `ng`
 - build: `./ng build [arg]`
