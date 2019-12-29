@@ -14,15 +14,15 @@ build() {
 }
 
 run() {
-    compose_base run atog go run "$@"
+    compose_base run ng go run "$@"
 }
 
 bash() {
-    compose_base run atog bash
+    compose_base run ng bash
 }
 
 go() {
-    compose_base run atog go "$@"
+    compose_base run ng go "$@"
 }
 
 case $command in

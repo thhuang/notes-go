@@ -10,5 +10,5 @@ COPY get.sh /tmp/.
 RUN bash /tmp/get.sh
 
 # Entry
-WORKDIR /go/src/github.com/user
+WORKDIR /go/src/github.com/Notes-Go
 CMD /bin/bash

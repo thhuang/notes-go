@@ -1,8 +1,8 @@
 version: "3"
 services:
-  atog:
+  ng:
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/go/src/github.com/user/.
+      - .:/go/src/github.com/Notes-Go/.
