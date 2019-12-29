@@ -17,6 +17,10 @@ run() {
     compose_base run ng go run "$@"
 }
 
+test() {
+    compose_base run ng go test "$@"
+}
+
 bash() {
     compose_base run ng bash
 }
@@ -34,6 +38,9 @@ fresh_build)
     ;;
 run)
     run "$@"
+    ;;
+test)
+    test "$@"
     ;;
 bash)
     bash
