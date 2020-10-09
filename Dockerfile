@@ -1,5 +1,5 @@
 FROM golang:1.13.5
-LABEL maintainer="thhuang@appcharmer.io"
+LABEL maintainer="tzhsn.huang@gmail.com"
 
 # Update apt-get
 RUN apt-get update && apt-get clean
